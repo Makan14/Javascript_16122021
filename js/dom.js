@@ -8,7 +8,7 @@
  */
 
 // GET = attraper qlq chose
-
+// SET = mettre qlq chose dedans
 //pr selctionner une balise
 let selectBody = document.getElementsByTagName("body");
 console.log(selectBody); //dns la console cst 1 HTMLCollection -> tableau
