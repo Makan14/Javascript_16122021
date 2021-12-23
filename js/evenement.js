@@ -15,6 +15,12 @@ console.log(btn2);
 let reponse = document.querySelector(".reponse");
 console.log(reponse);
 
+let reponseF = document.querySelector(".reponseF");
+console.log(reponseF);
+
+let inputId = document.querySelector("#inputId");
+console.log(inputId.value);
+
 //pr le mousemove
 let mouseMove = document.querySelector("#mouseMove");
 console.log(mouseMove);
@@ -35,11 +41,18 @@ function maFonction() {
 questionContainer.addEventListener("click", maFonction);
 
 btn1.addEventListener("click", () => {
+  reponse.style.visibility = "hidden";
+  reponse.style.display = "none";
   reponse.style.visibility = "visible";
+  reponseF.style.display = "block";
+  reponseF.style.visibility = "visible";
   questionContainer.style.background = "red";
 });
 
 btn2.addEventListener("click", () => {
+  reponseF.style.visibility = "hidden";
+  reponse.style.display = "block";
+  reponseF.style.display = "none";
   reponse.style.visibility = "visible";
   questionContainer.style.background = "green";
 });
@@ -58,5 +71,36 @@ window.addEventListener("mousedown", () => {
 });
 
 window.addEventListener("mouseup", () => {
-  mouseUp.style.transform = "scale(2) translate(-25%, -25%)";
+  mouseUp.style.transform = "scale(1) translate(-50%, -50%)";
 });
+
+//MOUSEENTER MOUSEOUT
+questionContainer.addEventListener("mouseenter", () => {
+  questionContainer.style.background = "#3333";
+});
+
+questionContainer.addEventListener("mouseout", () => {
+  questionContainer.style.background = "brown";
+});
+
+//MOUSEOVER
+reponse.addEventListener("mouseover", () => {
+  reponse.style.transform = "rotate(5deg)";
+});
+
+//pr la reponse se redimenssionne
+reponse.addEventListener("mouseout", () => {
+  reponse.style.transform = "rotate(0)";
+});
+
+reponseF.addEventListener("mouseover", () => {
+  reponseF.style.transform = "rotate(5deg)";
+});
+
+// inputId.value = "toto";
+
+// inputId.addEventListener("input", function () {
+//   console.log(inputId.value);
+//   let result = parseInt(inputId.value);
+//   console.log(result + 2);
+// });
