@@ -24,9 +24,9 @@ console.log(imgVegeta);
 //   goku.target.toggle(".imgGoku img");
 // });
 
-// vegeta.addEventListener("click", () => {
-//   imgVegeta.src = "img/vegeta.jpg";
-// });
+vegeta.addEventListener("click", () => {
+  imgVegeta.src = "img/vegeta.jpg";
+});
 
 // let tabImg = [".imgGoku", ".imgVegeta"];
 // console.log(tabImg);
